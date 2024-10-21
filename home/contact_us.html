@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="output.css">
 </head>
 <body class="bg-blue">
-    <div class="m-0 p-0">
-        <div class="h-16 w-full bg-grey fixed">
-            <div class="mt-4 mr-4 sm:mr-8 float-right h-8 w-8 flex justify-evenly items-center rounded-md border-black border-solid border">
-                <img src="./Images/menu_icon.png" id="menu_icon" alt="menu_icon">
+    <div class="m-0 p-0 relative">
+        <div class="h-[10vh] w-full bg-grey fixed z-50">
+            <div class="mt-[2.5vh] mr-[2.5vh] sm:mr-[5vh] float-right h-[5vh] w-[5vh] flex justify-evenly items-center rounded-md border-black border-solid border cursor-pointer" id="menu-icon">
+                <img src="./Images/menu_icon.png" alt="menu_icon">
             </div>
-            <div class="sm:visible invisible sm:float-right float-right sm:mt-4 sm:mr-4 md:mr-12 sm:flex sm:justify-evenly sm:items-center sm:w-60 md:w-80 sm:text-2xl font-medium">
+            <div class="sm:visible invisible sm:float-right float-right sm:mt-[2vh] sm:mr-[2.5vh] md:mr-[7.5vh] sm:flex sm:justify-evenly sm:items-center sm:w-[40vw] md:w-[25vw] sm:text-[4vh] font-medium">
                 <div class="cursor-pointer no-underline text-blue">
                     <a href="about_us.html">About Us</a>
                 </div>
@@ -20,11 +20,16 @@
                     <a href="contact_us.html">Contact Us</a>
                 </div>
             </div>
-            <div class="h-16 w-36 overflow-hidden flex justify-center items-center object-contain">
+            <div class="h-[10vh] w-36 overflow-hidden flex justify-center items-center object-contain">
                 <a href="../index.html"><img src="./Images/logo.jpeg" alt="logo" class="h-36 w-36 cursor-pointer"></a>
             </div>
         </div>
-        <div class="h-16 invisible"></div>
+        <div class="h-[10vh] w-full invisible"></div>
+        <div class="z-40 absolute h-[90vh] w-0 bg-blue transition-all duration-500 ease-in-out text-grey right-0" id="menu-bar">
+            <div id="states" class="hidden p-4">
+                <div class="text-[4vh]">States</div>
+            </div>
+        </div>
         <div class="text-grey h-full">
             <div class="font-bold sm:text-4xl text-3xl max-w-full sm:h-28 h-24 underline flex items-center sm:ml-12 ml-6">
                 <div>Contact Us</div>
@@ -40,7 +45,7 @@
                         </div>
                         <div class="h-8 w-8 rounded-full overflow-hidden mt-4">
                             <a href="https://github.com/bishnoisujal99">
-                                <img src="./Images/github_logo.png" class="h-8 w-8">
+                                <img src="./Images/github_logo.png" class="h-[5vh] w-[5vw]">
                             </a>
                         </div>
                     </div>
@@ -50,21 +55,22 @@
                             Co-Founder & Content Strategist<br>
                             With a deep interest in India's cultural heritage, Kevin leads the research and content creation, ensuring each state is represented accurately and engagingly.
                         </div>
-                        <div class="h-20 w-20 rounded-full overflow-hidden mt-4 flex bg-white">
+                        <div class="h-20 w-20 overflow-hidden mt-4 flex bg-white">
                             <a href="https://github.com/KGandhi90">
-                                <img src="./Images/github_logo.png" class="h-8 w-8 mr-4">
+                                <img src="./Images/github_logo.png" class="h-8 w-8 mr-4 rounded-full">
                             </a>
                             <a href="https://www.linkedin.com/in/kevin-gandhi-208617320/">
                                 <img src="./Images/linkedin_logo.png" class="h-8 w-8 rounded-full">
                             </a>
                         </div>
-                        <div class="h-8 w-8 rounded-full overflow-hidden flex justify-center items-center">
+                        <!-- <div class="h-8 w-8 rounded-full overflow-hidden flex justify-center items-center">
                             
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="../script.js"></script>
 </body>
 </html>

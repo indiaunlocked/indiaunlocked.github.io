@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     "./home/**/*.{html,js}",
+    "./maharashtra/**/*.{html,js}",
     "./index.html",
     "./script.js"
   ],
