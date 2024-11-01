@@ -6,28 +6,43 @@
     <title>Kerela</title>
     <link rel="stylesheet" href="../home/output.css">
 </head>
-<body>
+<body class="overflow-x-hidden">
     <div class="m-0 p-0 relative">
-        <div class="h-[10vh] max-w-full bg-grey">
+        <div class="h-[10vh] w-full bg-[#e6e9eb] fixed z-50">
             <div class="mt-[2.5vh] mr-[2.5vh] sm:mr-[5vh] float-right h-[5vh] w-[5vh] flex justify-evenly items-center rounded-md border-black border-solid border cursor-pointer" id="menu-icon">
                 <img src="../home/Images/menu_icon.png" alt="menu_icon">
             </div>
-            <div class="sm:visible invisible sm:float-right float-right sm:mt-[2vh] sm:mr-[2.5vh] md:mr-[7.5vh] sm:flex sm:justify-evenly sm:items-center sm:w-[40vw] md:w-[25vw] sm:text-[4vh] font-medium">
-                <div class="cursor-pointer no-underline text-blue">
+            <div class="md:visible invisible sm:float-right float-right sm:mt-[2vh] sm:mr-[5.5vh] md:mr-[7.5vh] sm:flex sm:justify-end sm:items-center sm:w-[50vw] md:w-[35vw] sm:text-[4vh] font-medium">
+                <div class="cursor-pointer no-underline text-[#214656] mr-[5vh]">
                     <a href="../home/about_us.html">About Us</a>
                 </div>
-                <div class="cursor-pointer no-underline text-blue">
+                <div class="cursor-pointer no-underline text-[#214656]">
                     <a href="../home/contact_us.html">Contact Us</a>
                 </div>
             </div>
-            <div class="h-[10vh] w-36 overflow-hidden flex justify-center items-center object-contain">
-                <a href="https://indiaunlocked.github.io"><img src="../home/Images/logo.jpeg" alt="logo" class="h-36 w-36 cursor-pointer"></a>
+            <div class="h-[10vh] w-36 overflow-hidden flex justify-center items-center object-contain cursor-pointer">
+                <a href="https://indiaunlocked.github.io"><img src="../home/Images/logo.jpeg" alt="logo"></a>
             </div>
         </div>
         <div class="h-[10vh] w-full invisible"></div>
-        <div class="z-40 absolute h-[90vh] w-0 bg-grey transition-all duration-500 ease-in-out text-blue right-0" id="menu-bar">
-            <div id="states" class="hidden p-4">
-                <div class="text-[4vh]">States</div>
+        <div class="z-40 absolute h-[90vh] w-0 bg-[#e6e9eb] transition-all duration-500 ease-in-out text-[#214656] right-0 select-none" id="menu-bar">
+            <div id="container" class="bg-[#214656]">
+                <div class="flex justify-between items-center bg-[#e6e9eb] p-2 cursor-pointer" id="states">
+                    <div class="text-[4vh] ml-4">States</div>
+                    <div><img src="../home/Images/dropdownicon.png" height="50px" width="50px"></div>
+                </div>
+                <div id="state-drop-down" class="bg-[#214656] hidden"></div>
+                <div class="flex justify-between items-center bg-[#e6e9eb] p-2 cursor-pointer mt-0.5" id="uts">
+                    <div class="text-[4vh] ml-4">Union Territories</div>
+                    <div><img src="../home/Images/dropdownicon.png" height="50px" width="50px"></div>
+                </div>
+                <div id="ut-drop-down" class="bg-[#214656] hidden"></div>
+                <div class="flex justify-between items-center bg-[#e6e9eb] p-2 cursor-pointer mt-0.5 md:hidden" id="about-us">
+                    <div class="text-[4vh] ml-4 outline-none"><a href="../home/about_us.html">About Us</a></div>
+                </div>
+                <div class="flex justify-between items-center bg-[#e6e9eb] p-2 cursor-pointer mt-0.5 md:hidden" id="contact-us">
+                    <div class="text-[4vh] ml-4 outline-none"><a href="../home/contact_us.html">Contact Us</a></div>
+                </div>
             </div>
         </div>
     </div>
