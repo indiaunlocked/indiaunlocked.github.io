@@ -554,6 +554,11 @@ video {
   display: none;
 }
 
+* {
+  scrollbar-color: initial;
+  scrollbar-width: initial;
+}
+
 .container {
   width: 100%;
 }
@@ -652,12 +657,12 @@ video {
   margin-right: 2.5rem;
 }
 
-.mr-4 {
-  margin-right: 1rem;
-}
-
 .mr-\[2\.5vh\] {
   margin-right: 2.5vh;
+}
+
+.mr-\[5vh\] {
+  margin-right: 5vh;
 }
 
 .mt-0\.5 {
@@ -676,36 +681,12 @@ video {
   margin-top: 2.5vh;
 }
 
-.mr-\[2\.4vh\] {
-  margin-right: 2.4vh;
-}
-
-.mr-\[3vh\] {
-  margin-right: 3vh;
-}
-
-.mr-\[5vh\] {
-  margin-right: 5vh;
-}
-
-.mr-\[10vh\] {
-  margin-right: 10vh;
-}
-
 .flex {
   display: flex;
 }
 
 .hidden {
   display: none;
-}
-
-.h-0\.5 {
-  height: 0.125rem;
-}
-
-.h-20 {
-  height: 5rem;
 }
 
 .h-24 {
@@ -774,10 +755,6 @@ video {
           user-select: none;
 }
 
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
 .items-center {
   align-items: center;
 }
@@ -800,6 +777,10 @@ video {
 
 .overflow-x-hidden {
   overflow-x: hidden;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
 }
 
 .rounded-full {
@@ -833,16 +814,6 @@ video {
   background-color: rgb(230 233 235 / var(--tw-bg-opacity));
 }
 
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-cyan-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(103 232 249 / var(--tw-bg-opacity));
-}
-
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -854,10 +825,6 @@ video {
 
 .p-2 {
   padding: 0.5rem;
-}
-
-.p-4 {
-  padding: 1rem;
 }
 
 .text-2xl {
@@ -924,11 +891,115 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media (min-width: 640px) {
-  .sm\:visible {
-    visibility: visible;
-  }
+.scrollbar::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track);
+  border-radius: var(--scrollbar-track-radius);
+}
 
+.scrollbar::-webkit-scrollbar-track:hover {
+  background-color: var(--scrollbar-track-hover, var(--scrollbar-track));
+}
+
+.scrollbar::-webkit-scrollbar-track:active {
+  background-color: var(--scrollbar-track-active, var(--scrollbar-track-hover, var(--scrollbar-track)));
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: var(--scrollbar-thumb-radius);
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover, var(--scrollbar-thumb));
+}
+
+.scrollbar::-webkit-scrollbar-thumb:active {
+  background-color: var(--scrollbar-thumb-active, var(--scrollbar-thumb-hover, var(--scrollbar-thumb)));
+}
+
+.scrollbar::-webkit-scrollbar-corner {
+  background-color: var(--scrollbar-corner);
+  border-radius: var(--scrollbar-corner-radius);
+}
+
+.scrollbar::-webkit-scrollbar-corner:hover {
+  background-color: var(--scrollbar-corner-hover, var(--scrollbar-corner));
+}
+
+.scrollbar::-webkit-scrollbar-corner:active {
+  background-color: var(--scrollbar-corner-active, var(--scrollbar-corner-hover, var(--scrollbar-corner)));
+}
+
+.scrollbar {
+  scrollbar-width: auto;
+  scrollbar-color: var(--scrollbar-thumb, initial) var(--scrollbar-track, initial);
+}
+
+.scrollbar::-webkit-scrollbar {
+  display: block;
+  width: var(--scrollbar-width, 16px);
+  height: var(--scrollbar-height, 16px);
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track);
+  border-radius: var(--scrollbar-track-radius);
+}
+
+.scrollbar-thin::-webkit-scrollbar-track:hover {
+  background-color: var(--scrollbar-track-hover, var(--scrollbar-track));
+}
+
+.scrollbar-thin::-webkit-scrollbar-track:active {
+  background-color: var(--scrollbar-track-active, var(--scrollbar-track-hover, var(--scrollbar-track)));
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: var(--scrollbar-thumb-radius);
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover, var(--scrollbar-thumb));
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:active {
+  background-color: var(--scrollbar-thumb-active, var(--scrollbar-thumb-hover, var(--scrollbar-thumb)));
+}
+
+.scrollbar-thin::-webkit-scrollbar-corner {
+  background-color: var(--scrollbar-corner);
+  border-radius: var(--scrollbar-corner-radius);
+}
+
+.scrollbar-thin::-webkit-scrollbar-corner:hover {
+  background-color: var(--scrollbar-corner-hover, var(--scrollbar-corner));
+}
+
+.scrollbar-thin::-webkit-scrollbar-corner:active {
+  background-color: var(--scrollbar-corner-active, var(--scrollbar-corner-hover, var(--scrollbar-corner)));
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb, initial) var(--scrollbar-track, initial);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar-track-\[\#e6e9eb\] {
+  --scrollbar-track: #e6e9eb !important;
+}
+
+.scrollbar-thumb-\[\#214656\] {
+  --scrollbar-thumb: #214656 !important;
+}
+
+@media (min-width: 640px) {
   .sm\:float-right {
     float: right;
   }
@@ -945,8 +1016,8 @@ video {
     margin-right: 5rem;
   }
 
-  .sm\:mr-\[2\.5vh\] {
-    margin-right: 2.5vh;
+  .sm\:mr-\[5\.5vh\] {
+    margin-right: 5.5vh;
   }
 
   .sm\:mr-\[5vh\] {
@@ -957,24 +1028,12 @@ video {
     margin-top: 2vh;
   }
 
-  .sm\:mr-\[5\.5vh\] {
-    margin-right: 5.5vh;
-  }
-
   .sm\:flex {
     display: flex;
   }
 
   .sm\:h-28 {
     height: 7rem;
-  }
-
-  .sm\:w-\[25vw\] {
-    width: 25vw;
-  }
-
-  .sm\:w-\[40vw\] {
-    width: 40vw;
   }
 
   .sm\:w-\[45vw\] {
@@ -985,36 +1044,12 @@ video {
     width: 50vw;
   }
 
-  .sm\:w-\[60vw\] {
-    width: 60vw;
-  }
-
-  .sm\:w-\[100vw\] {
-    width: 100vw;
-  }
-
-  .sm\:w-\[30vw\] {
-    width: 30vw;
-  }
-
-  .sm\:w-\[35vw\] {
-    width: 35vw;
-  }
-
-  .sm\:w-\[full\] {
-    width: full;
-  }
-
   .sm\:items-center {
     align-items: center;
   }
 
   .sm\:justify-end {
     justify-content: flex-end;
-  }
-
-  .sm\:justify-evenly {
-    justify-content: space-evenly;
   }
 
   .sm\:text-4xl {
@@ -1037,16 +1072,8 @@ video {
     visibility: visible;
   }
 
-  .md\:invisible {
-    visibility: hidden;
-  }
-
   .md\:mr-\[7\.5vh\] {
     margin-right: 7.5vh;
-  }
-
-  .md\:mr-\[5\.5vh\] {
-    margin-right: 5.5vh;
   }
 
   .md\:hidden {
@@ -1059,9 +1086,5 @@ video {
 
   .md\:w-\[35vw\] {
     width: 35vw;
-  }
-
-  .md\:w-\[24vw\] {
-    width: 24vw;
   }
 }

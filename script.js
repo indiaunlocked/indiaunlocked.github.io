@@ -9,11 +9,11 @@ let container = document.getElementById("container");
 menuIcon.addEventListener("click", () => {
     if(menuBar.classList.contains("w-0")){
         menuBar.classList.remove("w-0");
-        menuBar.classList.add("w-full", "sm:w-[45vw]", "md:w-[25vw]");
+        menuBar.classList.add("w-full", "sm:w-[45vw]", "md:w-[25vw]", "overflow-y-scroll", "scrollbar", "scrollbar-thin", "scrollbar-thumb-[#214656]", "scrollbar-track-[#e6e9eb]");
         container.classList.remove("hidden");
         container.classList.add("visible");
     } else {
-        menuBar.classList.remove("w-full", "sm:w-[45vw]", "md:w-[25vw]");
+        menuBar.classList.remove("w-full", "sm:w-[45vw]", "md:w-[25vw]", "overflow-y-scroll", "scrollbar", "scrollbar-thin", "scrollbar-thumb-[#214656]", "scrollbar-track-[#e6e9eb]");
         menuBar.classList.add("w-0");
         container.classList.remove("visible");
         container.classList.add("hidden");
